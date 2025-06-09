@@ -4713,3 +4713,42 @@ td:last-child {
   }
   
   
+/* ───────────────────────────────────────────────────────────
+   Vertically + horizontally center multi‐line text in your 
+   stroke buttons and let them auto-size
+   ─────────────────────────────────────────────────────────── */
+   .btn--stroke {
+    /* remove the old fixed‐height */
+    height: auto !important;
+  
+    /* paddings will now define your “box” size */
+    padding: clamp(1rem, 2vw, 1.5rem) clamp(1rem, 5vw, 3rem) !important;
+  
+    /* become a flex-container to center any number of lines */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  
+    /* allow clean wrapping + centered text */
+    white-space: normal !important;
+    text-align: center     !important;
+  }
+  
+
+  /* ───────────────────────────────────────────────────────────
+     Center the copyright at the very bottom
+     ─────────────────────────────────────────────────────────── */
+  #footer {
+    /* ensure footer children can be flex-centered */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #footer .ss-copyright {
+    /* full width + text centering */
+    width: 100% !important;
+    text-align: center !important;
+    margin-top: var(--vspace-1) !important;
+  }
+  
